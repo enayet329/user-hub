@@ -110,6 +110,7 @@ export class UserManagementComponent implements OnInit, OnDestroy {
           console.log('Users deleted successfully');
           this.autoLogoutIfSelfAffected(deletedUsers);
           this.selectedUserEmails = [];
+          
         },
         error => {
           this.loading = false;
@@ -139,6 +140,7 @@ export class UserManagementComponent implements OnInit, OnDestroy {
           console.log('Users blocked successfully');
           this.autoLogoutIfSelfAffected(blockedUsers);
           this.selectedUserEmails = [];
+          this.loadUsers();
         },
         error => {
           this.loading = false;
@@ -164,6 +166,7 @@ export class UserManagementComponent implements OnInit, OnDestroy {
               user.isBlocked = false;
             }
           });
+          this.autoLogoutIfSelfAffected(this.selectedUserEmails);
           console.log('Users unblocked successfully');
           this.loadUsers();
         },

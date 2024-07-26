@@ -1,28 +1,103 @@
-# AuthApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.0.
+# CleanAuth Frontend
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+CleanAuth is a web application that implements registration and authentication features following Clean Architecture principles. The frontend of CleanAuth is built with Angular and provides a user interface for authentication and user management functionalities and i also use jwt decode functionality to get user claims.
 
-## Code scaffolding
+Key features include:
+- User registration and authentication
+- User management table with details such as id, name, email, last login time, registration time, and status
+- Admin panel for managing users (restricted to authenticated users)
+- Multiple user selection with checkboxes
+- User actions: Block, Unblock, and Delete
+- Jwt Decodding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies Used
+
+- TypeScript
+- Angular
+- Bootstrap (CSS framework)
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+- Node.js (latest LTS version)
+- npm (comes with Node.js)
+- Angular CLI
+
+## Installation
+
+1. Clone the repository:
+   ```
+   git clone [repository URL]
+   ```
+
+2. Navigate to the frontend directory:
+   ```
+   cd cleanauth/frontend
+   ```
+
+3. Install dependencies:
+   ```
+   npm install
+   ```
+
+## Running the Application
+
+To start the development server:
+
+```
+ng serve
+```
+
+Navigate to `http://localhost:4200/` in your browser. The application will automatically reload if you change any of the source files.
 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Features
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. **Authentication:**
+   - User registration
+   - User login
+   - JWT-based authentication
 
-## Running end-to-end tests
+2. **User Management:**
+   - Table view of users with details (id, name, email, last login, registration time, status)
+   - Multiple user selection
+   - User actions: Block, Unblock, Delete
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. **Admin Panel:**
+   - Restricted access to authenticated users
+   - Comprehensive user management capabilities
 
-## Further help
+## Project Structure
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-# user-hub
+The project follows Angular's standard directory structure:
+
+```
+src/
+├── app/
+│   ├── components/
+│   ├── services/
+│   ├── models/
+│   ├── guards/
+│   └── ...
+├── assets/
+└── environments/
+```
+
+## Backend Integration
+
+This frontend is designed to work with a .NET backend. Ensure the backend API is running and properly configured for full functionality [Back-end GitHub](https://github.com/enayet329/UserHub.git).
+
+## Authors
+
+- **Md Enayet Hossain**
+  - Email: md.enayet.hossain329@gmail.com
+
+## Contact
+
+For inquiries or support, visit [Md Enayet Hossain's Portfolio](https://portfolio-enayet-hossain.vercel.app/home).

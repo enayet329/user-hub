@@ -1,0 +1,49 @@
+<div class="header navbar-expand-lg navbar-dark bg-dark">
+  <div class="header-content">
+    <div class="user-info">
+      <div class="user-actions">
+        <span class="loggedin-user">Hello, {{ loggedInUserName }}!</span>
+        <button (click)="logout()" class="logout-btn">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="actions">
+    <button (click)="blockSelectedUsers()">
+      <i class="fas fa-ban"></i> Block
+    </button>
+    <button (click)="unblockSelectedUsers()">
+      <i class="fas fa-unlock"></i> Unblock
+    </button>
+    <button (click)="deleteSelectedUsers()">
+      <i class="fas fa-trash"></i> Delete
+    </button>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"><strong>_</strong></th>
+        <th scope="col">Name</th>
+        <th scope="col">e-Mail</th>
+        <th scope="col">Last login</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>
+          <input type="checkbox" (change)="toggleUserSelection(user)">
+        </td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.lastLoginTime | date:'shortTime' }} {{ user.lastLoginTime | date:'mediumDate' }}</td>
+        <td>{{ user.isBlocked ? 'Blocked' : 'Active' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

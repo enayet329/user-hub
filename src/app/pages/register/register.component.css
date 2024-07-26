@@ -1,0 +1,57 @@
+body {
+  background-color: #2b2b2b; /* Dark background color */
+}
+
+.card {
+  background-color: #ffffff; /* White card background */
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 24px; /* Adjust the size as needed */
+}
+
+.login_register{
+  display: flex;
+  width: 100%;
+  border: 1px solid rgba(221, 221, 221, 1);
+  border-radius: 15px;
+  margin: 20px 0;
+}
+
+.login_register a{
+  font-size: 1em;
+  padding: 10px 55px;
+  border: none;
+  width: 50%;
+}
+
+.login_register a.login{
+  border-radius: 15px;
+  text-align: center;
+  background-color: transparent;
+  color: black;
+}
+
+.login_register a.register{
+  border-radius: 15px;
+  text-align: center;
+  background: linear-gradient(90deg, #003A74, #006AD5);
+  color: white;
+}
+
+.nav-tabs .nav-link {
+  color: #000000; /* Black text color */
+  border: 1px solid #ddd; /* Border for tabs */
+}
+
+.nav-tabs .nav-link.active {
+  color: #ffffff; /* Active tab text color */
+}
+
+.btn-primary {
+  background: linear-gradient(-90deg, #003A74, #006AD5);
+  border-color: #007bff; /* Button border color */
+  font-weight: bold;
+  font-size: 18px; /* Adjust the size as needed */
+}

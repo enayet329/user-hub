@@ -1,0 +1,49 @@
+<div class="d-flex justify-content-center align-items-center">
+  <div class="card shadow-lg" style="width: 28rem; border-radius: 15px">
+    <div class="card-body p-4">
+      <h5 class="card-title text-center mb-4">Login Form</h5>
+
+      <div class="login_register">
+        <a href="login" class="login">Login</a>
+        <a href="register" class="register">Signup</a>
+      </div>
+
+      <form [formGroup]="form" (submit)="onSubmit()">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            id="inputEmail"
+            class="form-control"
+            formControlName="email"
+            placeholder="Enter email"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input
+            type="password"
+            id="inputPassword"
+            class="form-control"
+            formControlName="password"
+            placeholder="Enter password"
+            required
+          />
+        </div>
+        <div class="d-grid">
+          <button
+            type="submit"
+            class="btn btn-primary btn-block"
+            [disabled]="form.invalid"
+          >
+            Signup
+          </button>
+        </div>
+      </form>
+      <div class="text-center mt-3">
+        <p>Not a member? <a href="register">Register</a></p>
+      </div>
+    </div>
+  </div>
+</div>

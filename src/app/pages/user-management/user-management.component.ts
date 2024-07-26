@@ -1,4 +1,3 @@
-
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ApiResponse, User } from '../../core/model/common.model';
 import { AuthService } from '../../core/services/auth.service';
@@ -110,7 +109,7 @@ export class UserManagementComponent implements OnInit, OnDestroy {
           console.log('Users deleted successfully');
           this.autoLogoutIfSelfAffected(deletedUsers);
           this.selectedUserEmails = [];
-          
+          window.location.reload();
         },
         error => {
           this.loading = false;
@@ -140,7 +139,7 @@ export class UserManagementComponent implements OnInit, OnDestroy {
           console.log('Users blocked successfully');
           this.autoLogoutIfSelfAffected(blockedUsers);
           this.selectedUserEmails = [];
-          this.loadUsers();
+          window.location.reload();
         },
         error => {
           this.loading = false;
@@ -168,7 +167,8 @@ export class UserManagementComponent implements OnInit, OnDestroy {
           });
           this.autoLogoutIfSelfAffected(this.selectedUserEmails);
           console.log('Users unblocked successfully');
-          this.loadUsers();
+          this.selectedUserEmails = [];
+          window.location.reload();
         },
         error => {
           this.loading = false;
